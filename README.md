@@ -4,12 +4,12 @@
 This git repository contains the Fetch Rewards Take Home Test.
 
 To run this application, first clone the repository by using:
-    - https: https://github.com/jmanusig1/fetch-rewards-take-home-test.git
-    - ssh: git@github.com:jmanusig1/fetch-rewards-take-home-test.git
+- https: https://github.com/jmanusig1/fetch-rewards-take-home-test.git
+- ssh: git@github.com:jmanusig1/fetch-rewards-take-home-test.git
 
 If you run the application using "go run main.go" several packages may not be installed. Install these packages: 
-    - go get github.com/stretchr/testify/assert  
-    - go get github.com/gofiber/fiber/v2 
+- go get github.com/stretchr/testify/assert  
+- go get github.com/gofiber/fiber/v2 
 
 After installing these dependencies, you may now run the program using the command "go run main.go" and it will run on the port 5000.
 
