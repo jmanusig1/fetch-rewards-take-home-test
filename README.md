@@ -25,10 +25,12 @@ When using postman, to
             "timestamp": "2019-12-12T03:20:50.52-04:00"
         }
     - hit send after populating the above mentioned
+    - ![](examples/add-transaction.png)
 
 - test getting the payer-point balances
     - populate the URL with a GET request: http://localhost:5000/get-balances
     - hit send after populating the URL
+    - ![](examples/get-balances.png)
 
 - test spending points
     - populate the URL with a POST request: http://localhost:5000/spend-points
@@ -37,5 +39,6 @@ When using postman, to
             "points": 1,
         }
     - hit send after populating the above mentioned
+    - ![](examples/spend-points.png)
 
 However, there are also unit test suites in the code that you can run using the commend "go test". To run these tests, run the command "go test" in each of the directories. 
