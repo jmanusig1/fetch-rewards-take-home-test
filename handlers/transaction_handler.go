@@ -6,6 +6,11 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
+/*
+	Description: AddTransaction adds a transaction by calling the transaction manager
+	Params: takes an fiber context instance
+	Return: a HTTP status code along with a JSON return body with the original transaction or error
+*/
 func AddTransaction(c *fiber.Ctx) error {
 
 	var transaction models.Transaction
@@ -23,6 +28,11 @@ func AddTransaction(c *fiber.Ctx) error {
 	return c.Status(200).JSON(transaction)
 }
 
+/*
+	Description: SpendPoints uses user points by calling the transaction manager
+	Params: takes an fiber context instance
+	Return: a HTTP status code along with a JSON return body with the original transaction or error
+*/
 func SpendPoints(c *fiber.Ctx) error {
 	var points models.Balance
 	

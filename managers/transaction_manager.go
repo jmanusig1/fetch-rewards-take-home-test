@@ -8,6 +8,11 @@ import (
 	"sort"
 )
 
+/*
+	Description: AddTransaction adds a transaction
+	Params: takes an instance of the model `transaction`
+	Return: the original transaction and an error
+*/
 func AddTransaction(transaction models.Transaction) (models.Transaction, error) {
 
 	ableToAdd := UpdateOrAddBalance(models.Balance{transaction.Payer, transaction.Points})
@@ -20,10 +25,18 @@ func AddTransaction(transaction models.Transaction) (models.Transaction, error) 
 	return transaction, errors.New("Transaction made payer/user balance negative")
 }
 
+/*
+	Description: GetTransactions gets the current transactions of the user
+	Return: an array containing all the transactions of the user
+*/
 func GetTransactions() []models.Transaction {
 	return database.Transactions
 }
 
+/*
+	Description: GetSortedTransactions gets the current transactions of the user
+	Return: an array containing all the transactions of the user in sorted order
+*/
 func GetSortedTransactions() []models.Transaction {
 	sortedTransactions := database.Transactions
 
@@ -35,7 +48,11 @@ func GetSortedTransactions() []models.Transaction {
 	return sortedTransactions
 }
 
-
+/*
+	Description: SpendPoints uses the balances of the user
+	Params: integer denoting how many points the user wants to spend
+	Return: an array of balances that have been spent by the user and an error 
+*/
 func SpendPoints(spendPoints int) ([]models.Balance, error) {
 
 	var spendResult []models.Balance
